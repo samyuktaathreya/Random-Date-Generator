@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+</head>
+<h1>Random Date Generator</h1>
+<body>
+    <div id = "date"></div>
+    <br>
+    <button id="dateGenerator" onclick="getDate()">Generate Date</button>
+    <br>
+    <br>
+    <label for="Guess">Guess the day of the week here:</label>
+    <input type="text" id="guess" name="Guess" placeholder = "Monday" onkeydown="checkGuess()">
+    <br>
+    <div id = 'verify' onkeypress="resetEntry()"></div>
+</body>
+</html>
