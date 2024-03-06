@@ -1,0 +1,29 @@
+body {
+    background-image: url("img_tree.gif"), url("paper.gif");
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc;
+  }
+  h1 {
+    font-size: 200;
+    color: white;
+    text-align: center;
+    font-family: verdana;
+  }
+  p {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+  }
+  label, div {
+    color: white;
+    text-align: center;
+    font-family: verdana;
+    font-size: 500;
+  }
+  
+  input, button {
+    text-align: center;
+    font-family: verdana;
+    font-size: 500;
+  }

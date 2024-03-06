@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <h1>Random Date Generator</h1>
 <body>
-    <div id = "date"></div>
+    <p id = "date"></p>
     <br>
-    <button id="dateGenerator" onclick="getDate()">Generate Date</button>
+    <div>
+        <button id="dateGenerator" onclick="getDate()">Generate Date</button>
     <br>
     <br>
-    <label for="Guess">Guess the day of the week here:</label>
+    <p for="Guess">Guess the day of the week here:</p>
     <input type="text" id="guess" name="Guess" placeholder = "Monday" onkeydown="checkGuess()">
     <br>
-    <div id = 'verify' onkeypress="resetEntry()"></div>
+    <p id = 'verify' onkeypress="resetEntry()"></p>
+    </div>
+    
 </body>
 </html>
