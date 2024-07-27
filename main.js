@@ -7,11 +7,13 @@ var monthsOf31 = [1,3,5,7,8,10,12]
 var keyValues = [1,4,4,0,2,5,0,3,6,1,4,6]
 var weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 var weekday = 'Monday'
-function randInt(low, high) {
+
+//functions
+function randInt(low, high) { //generate random integers
     let random = Math.random()
     return Math.round((high - low) * random + low)
 }
-function getDay(month) {
+function getDay(month) { //makes sure the random date generated is valid with the month
     if (monthsOf31.includes(month)) {
         return(randInt(1,31))
     }
@@ -22,7 +24,7 @@ function getDay(month) {
         return(randInt(1,30))
     }
 }
-function getDate() {
+function getDate() { //get day, month, and year
     document.getElementById('verify').innerHTML = ''
     month = randInt(1,12)   
     day = getDay(month)
@@ -31,7 +33,7 @@ function getDate() {
     weekday = getWeekDay(month,day,year)
     document.getElementById("date").innerHTML = date
 }
-function getWeekDay(month,day,year) {
+function getWeekDay(month,day,year) { //find weekday given date
     let returnSum
     //Take the last two digits of the year.
     let lastTwoDigits = year % 100
@@ -54,9 +56,6 @@ function getWeekDay(month,day,year) {
     returnSum = (returnSum - 1)%7
     //find corresponding day of the week
     return(weekDays[returnSum])
-}
-function test() {
-    document.write('hi')
 }
 function checkGuess() {
     const textInput = document.getElementById('guess');
@@ -81,9 +80,7 @@ function checkGuess() {
 function resetEntry(){
     const textBox = document.getElementById('verify');
     const textInput = document.getElementById('guess');
-    window.alert('hi')
     if (textBox.innerHTML != '') {
-        //window.alert('hi')
         textInput.value = ''
         textBox.innerHTML = ''
     }
