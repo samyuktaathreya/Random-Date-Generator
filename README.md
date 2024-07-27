@@ -1,2 +1,2 @@
 # Random-Date-Generator
- Generates a date so that I can guess weekdays.
+Random date generator is the newest edition of my infinite descent into web development. I wanted to make a website about something. I also wanted to test my ability to remember dates of the past and what weekday they correspond to. And thus, random date generator was born. I practiced JavaScript, HTML, CSS! I did not practice letting go of the past! Two birds one stone bam!
