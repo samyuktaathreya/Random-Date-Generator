@@ -26,9 +26,21 @@ function getDay(month) { //makes sure the random date generated is valid with th
 }
 function getDate() { //get day, month, and year
     document.getElementById('verify').innerHTML = ''
-    month = randInt(1,12)   
-    day = getDay(month)
-    year = randInt(2021,2023)
+    
+    //make sure the chosen date is in the last 3 years
+    const curDate = new Date();
+    console.log(curDate);
+    const twoYearsAgo = new Date(curDate);
+    twoYearsAgo.setFullYear(curDate.getFullYear() - 2);
+    curYear = curDate.getFullYear()
+    minPosYear = curYear - 3
+    do {
+        month = randInt(1,12)   
+        day = getDay(month)
+        year = randInt(minPosYear,curYear)
+        randomDate = new Date(year, month - 1, day)     
+        
+    } while (randomDate < twoYearsAgo || randomDate > curDate);
     date = month + '/' + day + '/' + year
     weekday = getWeekDay(month,day,year)
     document.getElementById("date").innerHTML = date
